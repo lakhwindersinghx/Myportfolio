@@ -1,0 +1,96 @@
+<Cover
+  src="/Microservices.jpg"
+  alt="Example image"
+/>
+
+
+# Resilient Event-Driven Microservices Architecture with CI/CD
+
+In this project, we built a microservices-based system that synchronizes user and order data using an event-driven approach, Docker containerization, and automated CI/CD pipelines.
+
+---
+
+## Architecture Overview
+
+Our solution comprises several key components:
+- **User Microservices (v1 & v2):** Two versions managing user data with CRUD operations, where updates trigger synchronization events.
+- **Order Microservice:** Manages order processing and maintains data consistency by updating records based on user events.
+- **API Gateway:** Routes HTTP requests and implements the strangler pattern to smoothly transition traffic from v1 to v2.
+- **Event-Driven System:** Uses RabbitMQ to enable real-time data synchronization between services.
+- **Data Storage:** MongoDB is used for scalable storage of user and order data.
+
+---
+
+## Microservices Implementation
+
+### User Microservices
+- **Version 1 (v1):**
+  - Provides basic user creation and update operations.
+  - Stores user information (userId, email, deliveryAddress) in MongoDB.
+  - Publishes update events to RabbitMQ for data synchronization.
+- **Version 2 (v2):**
+  - Enhances v1 with stricter data validation and additional endpoints.
+  - The API Gateway routes a configurable percentage of traffic to v2, enabling a seamless migration via the strangler pattern.
+
+### Order Microservice
+- Manages orders including order ID, product details, status, and user-related data.
+- Listens for user update events from RabbitMQ and updates the order records in real time.
+
+---
+
+## Event-Driven Synchronization with RabbitMQ
+
+- **Mechanism:**  
+  When user data (email or delivery address) is updated, an event is published to a RabbitMQ queue. The Order Microservice consumes these events to update its records immediately.
+- **Benefits:**  
+  Ensures real-time data consistency and decouples the user and order services, enhancing overall system resilience.
+
+---
+
+## Strangler Pattern for Seamless Migration
+
+- **Implementation:**  
+  The API Gateway uses a configurable parameter (P) to route a specified percentage of user requests to v1 and the remainder to v2.
+- **Advantage:**  
+  This strategy allows for gradual migration from the old to the new version without downtime, ensuring continuous service availability.
+
+---
+
+## Docker Deployment and CI/CD Integration
+
+- **Containerization:**  
+  Each component—including the API Gateway, both User Microservices, the Order Microservice, and RabbitMQ—is containerized using Docker. Docker Compose orchestrates these containers for smooth deployment.
+- **Cloud Deployment:**  
+  The entire system is deployed on a cloud VM, with public endpoints exposed for API access.
+- **CI/CD Pipeline:**  
+  GitHub Actions automates testing and deployment. On each commit, the CI/CD workflow builds the Docker containers and deploys them, ensuring rapid and reliable updates.
+
+---
+
+## Experimental Results
+
+- **Functional Testing:**  
+  All microservices correctly handled CRUD operations, and updates in user data were synchronized to the order database in real time.
+- **Performance Metrics:**  
+  - Average response times remained low under normal load.
+  - Event processing delays were minimal, ensuring timely updates.
+- **Strangler Pattern Efficiency:**  
+  Dynamic traffic routing between v1 and v2 was achieved without service disruption.
+- **Deployment Robustness:**  
+  The Docker-based environment and CI/CD pipeline provided efficient scaling and seamless, automated deployments.
+
+---
+
+## Conclusion
+
+By integrating microservices, an event-driven system with RabbitMQ, and automated CI/CD workflows, our architecture achieves scalable, resilient, and real-time data synchronization between user and order systems. The use of the strangler pattern further ensures smooth migration between service versions, making the solution both robust and future-proof.
+
+---
+
+### Further Reading
+
+- [Microservices Architecture on Azure](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
+- [RabbitMQ Documentation](https://www.rabbitmq.com/)
+- [Docker and Docker Compose](https://docs.docker.com/compose/)
+- [CI/CD with GitHub Actions](https://github.com/features/actions)
+- [Github Repo](https://github.com/lakhwindersinghx/POC_assignment_2)

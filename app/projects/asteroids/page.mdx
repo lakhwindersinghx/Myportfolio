@@ -1,0 +1,41 @@
+<video
+  src="/asteroids.mp4"
+  controls
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="mt-12 w-full max-w-3xl rounded-xl shadow-lg mx-auto"
+/>
+---
+
+## Architecture Overview
+
+Asteroids developed by Atari and self published in the year 1979 is a video game classic. The gameplay consists of the player steering a triangular spaceship, with the goal of destroying asteroids by shooting them.
+
+What follows is a larger scale example, where I create a part of the Asteroids game. The game is also an exercise in the JAVA MOOC course.
+The game is constructed in multiple parts, which are the following:
+
+- **Creating the game window**
+- **Creating the ship**
+- **Turning the ship**
+- **Moving the ship**
+- **Creating an asteroid**
+- **The collision between the ship and an asteroid**
+- **Multiple asteroids**
+- **Staying within the window**
+- **Projectiles**
+- **Adding points**
+- **Continuous adding of asteroids**
+---
+## Technologies Used
+
+This project was developed using the following technologies and frameworks:
+
+- **Java**: The core language used for game logic and object-oriented programming structure.
+- **JavaFX**: Used for building the graphical user interface, rendering game elements (ship, asteroids, projectiles), and handling real-time animations.
+- **Object-Oriented Design**: The project leverages key OOP principles such as inheritance, abstraction, and encapsulation to model game entities like `Ship`, `Asteroid`, and `Projectile`.
+- **AnimationTimer (JavaFX)**: Enables a consistent game loop and real-time updates for motion and collision detection.
+- **Keyboard Event Handling**: JavaFX `KeyEvent` listeners allow users to control the ship (rotate, thrust, and shoot) using keyboard input.
+- **Collision Detection**: Basic geometric intersection logic is used to detect when asteroids and projectiles collide.
+
