@@ -45,10 +45,10 @@ export const PROJECTS: Project[] = [
     id: 'project1',
   },
   {
-    name: 'TripMate',
+    name: 'Context Tracker',
     description:
-      'Flight management system.',
-    link: '',
+      'Browser Activity Monitoring System.',
+    link: 'https://github.com/lakhwindersinghx/WebExtension',
     image:
       '/comingsoon.png',
     id: 'project2',
@@ -85,9 +85,9 @@ export const EDUCATION: Education[] = [
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'Kozano Seating Systems',
-    title: 'Data Engineering Intern',
+    title: 'Software Developer',
     start: '2021/06',
-    end: '2021/12',
+    end: '2022/08',
     id: 'work1',
   },
 ]
