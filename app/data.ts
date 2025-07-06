@@ -90,6 +90,13 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2022/08',
     id: 'work1',
   },
+    {
+    company: 'Redsens',
+    title: 'Software Developer',
+    start: '2025/05',
+    end: 'present',
+    id: 'work1',
+  },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
