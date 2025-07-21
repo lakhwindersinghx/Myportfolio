@@ -45,12 +45,12 @@ export const PROJECTS: Project[] = [
     id: 'project1',
   },
   {
-    name: 'Context Tracker',
+    name: 'Drive-Assist',
     description:
-      'Browser Activity Monitoring System.',
-    link: 'https://github.com/lakhwindersinghx/WebExtension',
-    image:
-      '/comingsoon.png',
+      'Real-Time Object Detection with Raspberry Pi & Coral USB.',
+    link: 'https://github.com/lakhwindersinghx/Drive-Assist',
+    video:
+      'https://player.cloudinary.com/embed/?cloud_name=dagivyfp3&public_id=cropped_yfjpy2&profile=cld-default',
     id: 'project2',
   },
   {
@@ -93,7 +93,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     {
     company: 'Redsens',
     title: 'Software Developer',
-    start: '2025/05',
+    start: '2025/02',
     end: 'present',
     id: 'work1',
   },
