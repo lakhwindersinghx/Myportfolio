@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       'Real-Time Object Detection with Raspberry Pi & Coral USB.',
     link: 'https://github.com/lakhwindersinghx/Drive-Assist',
     video:
-      'https://player.cloudinary.com/embed/?cloud_name=dagivyfp3&public_id=cropped_yfjpy2&profile=cld-default',
+      'https://res.cloudinary.com/dagivyfp3/video/upload/f_webm,vc_vp9/v1753110665/cropped_yfjpy2',
     id: 'project2',
   },
   {
