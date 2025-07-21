@@ -83,6 +83,13 @@ export const EDUCATION: Education[] = [
 
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
+     {
+    company: 'Redsens',
+    title: 'Software Developer',
+    start: '2025/02',
+    end: 'present',
+    id: 'work1',
+  },
   {
     company: 'Kozano Seating Systems',
     title: 'Software Developer',
@@ -90,13 +97,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2022/08',
     id: 'work1',
   },
-    {
-    company: 'Redsens',
-    title: 'Software Developer',
-    start: '2025/02',
-    end: 'present',
-    id: 'work1',
-  },
+ 
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
