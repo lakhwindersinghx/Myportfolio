@@ -86,7 +86,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
      {
     company: 'Redsens',
     title: 'Software Developer',
-    start: '2025/02',
+    start: '2025/05',
     end: 'present',
     id: 'work1',
   },
